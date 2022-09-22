@@ -97,6 +97,8 @@ function _osnd_configure_opensand_carriers() {
 			--update "//return_up_band/spot[@id='1']/bandwidth" --value "19.98" \
 			--update "//return_up_band/spot[@id='1']/carriers_distribution/up_carriers[@category='Standard']/@ratio" --value "100" \
 			--update "//return_up_band/spot[@id='1']/carriers_distribution/up_carriers[@category='Standard']/@symbol_rate" --value "14.8E6" \
+			--update "//common/forward_down_carrier_duration" --value "1" \
+			--update "//common/return_up_carrier_duration" --value "1" \
 			"${OSND_TMP}/config_${entity}/core_global.conf"
 	done
 }
